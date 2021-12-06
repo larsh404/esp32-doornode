@@ -1,0 +1,82 @@
+{
+  "node":
+  {
+    "hostname": "door"
+  },
+  "mqtt":
+  {
+    "server":
+   {
+      "host": "mqtthost.domain.tld",
+      "port": 8883,
+      "user": "door",
+      "passwd": "base64encodedsecretpasswd",
+      "fingerprint": "xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx"
+    },
+    "topic":
+    {
+      "base": "/base/path/",
+      "closed": null,
+      "locked": null,
+      "doorbell": null,
+      "buzzer": null,
+      "led": null
+    },
+    "will":
+    {
+      "topic": "/base/path/bolt-contact",
+      "qos": 1,
+      "retain": true,
+      "message": "-1"
+    }
+  },
+  "debug":
+  {
+    "force": false,
+    "uptimeInterval": 900000
+  },
+  "gpio":
+  {
+    "buzzer": 32,
+    "ws2812": 33,
+    "doorbell": 34,
+    "door": 35,
+    "lock": 15,
+    "doorbellUseInterrupt": false,
+    "minimumActiveTime": 5
+  },
+  "ws2812":
+  {
+    "type": "GRB",
+    "num": 8,
+    "brightness": 200,
+    "gamma": 2.8,
+    "noEth": "0000ff -800 00ff00 -800 000ff 0",
+    "noMqtt": null,
+    "animationInterval": 5
+  },
+  "web":
+  {
+    "port": 80,
+    "accessPasswd": "base64encodedsecretpasswd",
+    "adminPasswd": "base64encodedsecretpasswd"
+  },
+  "syslog":
+  {
+    "host": "sysloghost.domain.tld",
+    "port": 514,
+    "appName": "door"
+  },
+  "ntp":
+  {
+    "host": "ntp.domain.tld"
+  },
+  "buzzer":
+  {
+    "maxTime": 10000
+  },
+  "lldp":
+  {
+    "interval": 30000
+  }
+}
